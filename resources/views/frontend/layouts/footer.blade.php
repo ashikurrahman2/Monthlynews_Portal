@@ -1,97 +1,106 @@
-<footer>
-    <!-- Footer Start-->
-    <div class="footer-area footer-padding fix">
-         <div class="container">
-             <div class="row d-flex justify-content-between">
-                 <div class="col-xl-5 col-lg-5 col-md-7 col-sm-12">
-                     <div class="single-footer-caption">
-                         <div class="single-footer-caption">
-                             <!-- logo -->
-                             <div class="footer-logo">
-                                 <a href="index-2.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                             </div>
-                             <div class="footer-tittle">
-                                 <div class="footer-pera">
-                                     <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales  Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida sodales  Suscipit mauris pede for sectetuer.</p>
-                                 </div>
-                             </div>
-                             <!-- social -->
-                             <div class="footer-social">
-                                 <a href="#"><i class="fab fa-twitter"></i></a>
-                                 <a href="#"><i class="fab fa-instagram"></i></a>
-                                 <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-xl-3 col-lg-3 col-md-4  col-sm-6">
-                     <div class="single-footer-caption mt-60">
-                         <div class="footer-tittle">
-                             <h4>Newsletter</h4>
-                             <p>Heaven fruitful doesn't over les idays appear creeping</p>
-                             <!-- Form -->
-                             <div class="footer-form" >
-                                 <div id="mc_embed_signup">
-                                     <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                     method="get" class="subscribe_form relative mail_part">
-                                         <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                                         class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                         onblur="this.placeholder = ' Email Address '">
-                                         <div class="form-icon">
-                                         <button type="submit" name="submit" id="newsletter-submit"
-                                         class="email_icon newsletter-submit button-contactForm"><img src="assets/img/logo/form-iocn.png" alt=""></button>
-                                         </div>
-                                         <div class="mt-10 info"></div>
-                                     </form>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-                     <div class="single-footer-caption mb-50 mt-60">
-                         <div class="footer-tittle">
-                             <h4>Instagram Feed</h4>
-                         </div>
-                         <div class="instagram-gellay">
-                             <ul class="insta-feed">
-                                 <li><a href="#"><img src="assets/img/post/instra1.jpg" alt=""></a></li>
-                                 <li><a href="#"><img src="assets/img/post/instra2.jpg" alt=""></a></li>
-                                 <li><a href="#"><img src="assets/img/post/instra3.jpg" alt=""></a></li>
-                                 <li><a href="#"><img src="assets/img/post/instra4.jpg" alt=""></a></li>
-                                 <li><a href="#"><img src="assets/img/post/instra5.jpg" alt=""></a></li>
-                                 <li><a href="#"><img src="assets/img/post/instra6.jpg" alt=""></a></li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-    <!-- footer-bottom aera -->
-    <div class="footer-bottom-area">
-        <div class="container">
-            <div class="footer-border">
-                 <div class="row d-flex align-items-center justify-content-between">
-                     <div class="col-lg-6">
-                         <div class="footer-copy-right">
-                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
-                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                         </div>
-                     </div>
-                     <div class="col-lg-6">
-                         <div class="footer-menu f-right">
-                             <ul>                             
-                                 <li><a href="#">Terms of use</a></li>
-                                 <li><a href="#">Privacy Policy</a></li>
-                                 <li><a href="#">Contact</a></li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
+<div class="footer-area bg-black pd-top-60">
+    <div class="container">
+        <div class="footer-top">
+            <div class="subscribe-wrap">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 align-self-center">
+                        <h4>SUBSCRIBE FOR NEWSLETTER</h4>
+                    </div>
+                    <div class="col-xl-9 col-lg-8 align-self-center mt-3 mt-lg-0">
+                        <div class="subscribe-inner">
+                            <input type="text" placeholder="Enter email address">
+                            <button class="btn btn-red">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="widget">
+                    <div class="widget_about">
+                        <a class="logo" href="index.html"><img src="{{asset('/')}}frontend/assets/img/logo-2.png" alt="img"></a>
+                        <p>Magpie matrix economically sound value through cooperative technology task fully researched data and enterprise process improvements quality  products via client-focused results.</p>
+                        <ul class="social-area social-area-2 mt-4">
+                            <li><a class="facebook-icon" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter-icon" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="youtube-icon" href="#"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a class="instagram-icon" href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a class="google-icon" href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-6">
+                <div class="widget widget_nav_menu">
+                    <h4 class="widget-title">Useful Link</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="cat-tech.html">Tech</a></li>
+                        <li><a href="blog-details.html">Blog Single</a></li>
+                        <li><a href="cat-fashion.html">Fashion</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-6">
+                <div class="widget widget_nav_menu">
+                    <h4 class="widget-title">Category</h4>
+                    <ul>
+                        <li><a href="cat-tech.html">Tech</a></li>
+                        <li><a href="cat-fashion.html">Fashion</a></li>
+                        <li><a href="cat-lifestyle.html">Lifestyle</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="author.html">Author</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="widget widget_recent_post">
+                    <h5 class="widget-title">POPULAR NEWS</h5>
+                    <div class="single-post-list-wrap style-white">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="{{asset('/')}}frontend/assets/img/other/1.png" alt="img">
+                            </div>
+                            <div class="media-body align-self-center">
+                                <div class="details">
+                                    <a class="cat-text cat-green" href="#">HEALTH</a>
+                                    <h6><a href="blog-details.html">Ratcliffe to be of nation talent</a></h6>
+                                    <div class="post-meta-single">
+                                        <ul>
+                                            <li><i class="fa fa-user"></i>Magpie</li>
+                                            <li><i class="fa fa-clock-o"></i> April 7, 2021</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-post-list-wrap style-white">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="{{asset('/')}}frontend/assets/img/other/1.png" alt="img">
+                            </div>
+                            <div class="media-body align-self-center">
+                                <div class="details">
+                                    <a class="cat-text cat-green" href="#">HEALTH</a>
+                                    <h6><a href="blog-details.html">Ratcliffe to be of nation talent</a></h6>
+                                    <div class="post-meta-single">
+                                        <ul>
+                                            <li><i class="fa fa-user"></i>Magpie</li>
+                                            <li><i class="fa fa-clock-o"></i> April 7, 2021</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Footer End-->
-</footer>
+    <div class="footer-bottom text-center">
+        <p>2023 © All rights reserved by Bangla Theme</p>
+    </div>
+</div>

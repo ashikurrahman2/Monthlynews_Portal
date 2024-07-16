@@ -50,13 +50,7 @@
                                 href="{{route('category.index')}}">Categories</a>
                             </li>
                             <li class="pc-item"><a class="pc-link"
-                                href="{{route('subcategory.index')}}">Subcategories</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link"
-                                href="{{route('childcategory.index')}}">Childcategories</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link"
-                                href="{{route('brand.index')}}">Brand</a>
+                                href="{{route('epaper.index')}}">Epaper</a>
                             </li>
                              <li class="pc-item"><a class="pc-link"
                                 href="{{route('article.index')}}">Article</a>
@@ -81,7 +75,7 @@
                 <li class="pc-item pc-hasmenu">
                     <a href="#!" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-settings"></i></span>
-                            <span class="pc-mtext">Setting</span>
+                            <span class="pc-mtext">Settings</span>
                             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                     </a>
                     <ul class="pc-submenu">
@@ -95,23 +89,17 @@
                             href="{{route('page.index')}}">Page Management</a>
                         </li>
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('smtp.index')}}">SMTP Setting</a>
+                            href="{{route('smtp.index')}}">SMTP Settings</a>
                         </li>
                         <li class="pc-item"><a class="pc-link"
                             href="{{route('brand.index')}}">Payment Gateway</a>
                         </li>
+                        <li class="pc-item"><a class="pc-link"
+            
+                            href="{{ route('contacts.index') }}"> Contact</a>
+                    </li>
                     </ul>
                 </li>
-
-                      {{-- Contact Section --}}
-               <li class="pc-item pc-hasmenu"><a href="#" class="pc-link"><span class="pc-micon"><i
-                class="ph-duotone ph-layout"></i> </span><span class="pc-mtext">Contact</span> <span
-            class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-        <ul class="pc-submenu">
-        <li class="pc-item"><a class="pc-link"
-            
-                href="{{ route('contacts.index') }}">Add Contact</a>
-        </li>
 
             </ul>
             <div class="card nav-action-card">

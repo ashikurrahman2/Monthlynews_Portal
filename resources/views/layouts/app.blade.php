@@ -1,48 +1,60 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@yield('title'| 'NewsPortal') </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.html">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magpie - Blog, Magazine Html Template</title>
+    
+    <!-- favicon -->
+    <link rel=icon href="{{asset('/')}}frontend/assets/img/favicon.png" sizes="20x20" type="image/png">
 
-		<!-- CSS here -->
-     @include('frontend.layouts.style')
-   </head>
+    <!-- Stylesheet -->
+@include('frontend.layouts.style')
 
-   <body>
-       
-    <!-- Preloader Start -->
-    <!-- <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
-                </div>
+</head>
+<body class="home-2">
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
             </div>
         </div>
-    </div> -->
-    <!-- Preloader Start -->
+    </div>
 
-@include('frontend.layouts.header')
+    <!-- search popup start-->
+    <div class="td-search-popup" id="td-search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- search popup end-->
+    <div class="body-overlay" id="body-overlay"></div>
 
-    <main>
-        @yield('content')
-        <!-- End pagination  -->
-    </main>
-    
+    <!-- header start -->
+    @include('frontend.layouts.header')
+    <!-- navbar end -->
 
-@include('frontend.layouts.footer') 
-	<!-- JS here -->
-	
-    @include('frontend.layouts.script')
-        
-    </body>
+    @yield('content')
 
+    <!-- footer area start -->
+    @include('frontend.layouts.footer')
+    <!-- footer area end -->
 
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+    <!-- all plugins here -->
+@include('frontend.layouts.script')
+</body>
 </html>

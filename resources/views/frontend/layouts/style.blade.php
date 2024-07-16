@@ -1,13 +1,11 @@
-<!-- CSS here -->
-<link rel="stylesheet" href="{{asset('/')}}assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/ticker-style.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/flaticon.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/slicknav.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/animate.min.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/magnific-popup.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/themify-icons.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/slick.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/nice-select.css">
-<link rel="stylesheet" href="{{asset('/')}}assets/css/style.css">
+    <!-- favicon -->
+    <link rel=icon href="{{asset('/')}}frontend/assets/img/favicon.png" sizes="20x20" type="image/png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/vendor.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/style.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/responsive.css">
+    <!-- Flipbook StyleSheets -->
+    <link href="{{asset('/')}}frontend/assets/css/dflip.min.css" rel="stylesheet" type="text/css">
+    <!-- themify-icons.min.css is not required in version 2.0 and above -->
+    <link href="{{asset('/')}}frontend/assets/css/themify-icons.min.css" rel="stylesheet" type="text/css">

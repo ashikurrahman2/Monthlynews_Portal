@@ -26,16 +26,6 @@ class ArticleController extends Controller
             $articles= article::all();
             return DataTables::of($articles)
             ->addIndexColumn()
-            ->editColumn('category_name', function ($row) {
-                return $row->category->category_name;
-            })
-            ->addColumn('image', function ($row) {
-                if ($row->image) {
-                    return '<img src="' . asset($row->image) . '" alt="image" class="img-fluid center-image" style="max-width: 40px; display: block; margin: 0 auto;">';
-                } else {
-                    return 'No logo uploaded';
-                }
-            })
             ->addColumn('action', function ($row) {
                 $actionbtn = '<a href="javascript:void(0)" class="btn btn-primary btn-sm me-1 edit" data-id="' . $row->id . '" data-bs-toggle="modal" data-bs-target="#editModal">
                                 <i class="fa fa-edit"></i>
@@ -52,8 +42,7 @@ class ArticleController extends Controller
             ->rawColumns(['image','action'])
             ->make(true);
         }
-        $categories=categorie::all();
-        return view('admin.article.index',compact('categories'));
+        return view('admin.article.index');
     }
 
     /**
@@ -61,7 +50,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.article.create');
     }
 
     /**

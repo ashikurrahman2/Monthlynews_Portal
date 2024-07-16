@@ -70,38 +70,34 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title h4" id="myLargeModalLabel">Add New Brand</h5>
+                <h5 class="modal-title h4" id="myLargeModalLabel">Add New Article</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{route('article.store')}}" method="post" id="add-form" enctype="multipart/form-data">
+            <form action="{{route('article.store')}}" method="post" id="add-form">
               @csrf
               <div class="modal-body">
                 <div class="row">
-                  <div class="form-group col-md-6">
+                  <div class="col-md-12">
                       <label for="e_title" class="col-form-label pt-0">Title <sup class="text-size-20 top-1">*</sup></label>
                       <input type="text" class="form-control" id="e_title" name="title" required>
                   </div>
-                  <div class="form-group col-md-6">
-                      <label for="e_category_id" class="col-form-label pt-0">Category <sup class="text-size-20 top-1">*</sup></label>
-                      <select class="form-control" id="e_category_id" name="category_id" required>
-                          @foreach($categories as $category)
-                              <option value="{{ $category->id }}">{{ $category->category_name }}</option>
-                          @endforeach
-                      </select>
+                  <div class="col-md-12">
+                      <label for="e_excerpt" class="col-form-label pt-0">Author <sup class="text-size-20 top-1">*</sup></label>
+                      <input type="text" class="form-control" id="e_title" name="Author_name" required>
                   </div>
-                  <div class="form-group">
-                      <label for="e_excerpt" class="col-form-label pt-0">Excerpt <sup class="text-size-20 top-1">*</sup></label>
-                      <textarea class="form-control" id="e_excerpt" name="excerpt" required></textarea>
+                  <div class="col-md-12">
+                      <label for="e_excerpt" class="col-form-label pt-0">Designation <sup class="text-size-20 top-1">*</sup></label>
+                      <input type="text" class="form-control" id="e_title" name="Author_designation" required>
                   </div>
-                  <div class="form-group">
-                      <label for="e_content" class="col-form-label pt-0">Content <sup class="text-size-20 top-1">*</sup></label>
-                      <textarea class="form-control" id="e_content" name="content" required></textarea>
-                  </div>
-                  <div class="form-group">
-                      <label for="e_image" class="col-form-label pt-0">Image <sup class="text-size-20 top-1">*</sup></label>
-                      <input type="file" class="dropify" id="e_image" name="image">
-                  </div>
-                  <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                        <label class="form-label">Content</label>
+                        <textarea class="form-control" name="content" id="summernote" rows="4"></textarea>
+                        {{-- <textarea class="form-control" name="content" id="summernote" rows="4">{{ old('content') }}</textarea> --}}
+                    </div>
+                </div>
+                
+                  <div class="col-md-12">
                       <label for="e_published_at" class="col-form-label pt-0">Published At</label>
                       <input type="datetime-local" class="form-control" id="e_published_at" name="published_at">
                   </div>
@@ -109,14 +105,14 @@
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                       <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
-              </div>
+                </div>
+          
               </div>
             </form>
         </div>
     </div>
-                 
-
 </div>
+
 
  <!-- Edit Modal -->
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -132,7 +128,10 @@
       </div>
   </div>
 </div>
+
+
   <!-- Script -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script type="text/javascript">
     $(function article(){
@@ -143,9 +142,9 @@
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                 { data: 'title', name: 'title' },
-                { data: 'category_name', name: 'category_name' },
+                { data: 'Author_name', name: 'Author_name' },
+                { data: 'Author_designation', name: 'Author_designation' },
                 { data: 'content', name: 'content' },
-                { data: 'image', name: 'image' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]
       });

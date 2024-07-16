@@ -27,17 +27,21 @@
 <!--Internal Fileuploads js-->
 <script src="{{asset('/')}}admin/assets/fileuploads/js/fileupload.js"></script>
 <script src="{{asset('/')}}admin/assets/fileuploads/js/file-upload.js"></script>
-<!-- Summernote -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
-<script>
-  $(document).ready(function() {
-      $('#summernote').summernote({
-          height: 300,
-      });
-  });
-</script>
- <!-- Script -->
- 
+    <!-- Summernote -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js" ></script>
+    <!-- Bootstrap Tags Input JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>  -
+   
+  <script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 100, // set editor height
+            minHeight: null, // set minimum height of editor
+            maxHeight: null, // set maximum height of editor
+            focus: true // set focus to editable area after initializing Summernote
+        });
+    });
+  </script>
  <script>
    // [ Column Selectors ]
    $('#cbtn-selectors').DataTable({
