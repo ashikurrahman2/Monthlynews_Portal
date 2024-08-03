@@ -22,18 +22,18 @@ class AdvertisementController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $advertisement= advertisement::all();
+            $advertisement = advertisement::all();
             return DataTables::of($advertisement)
-            ->addIndexColumn()
-            ->addColumn('image', function ($row) {
-                if ($row->image) {
-                    return '<img src="' . asset($row->image) . '" alt="image" class="img-fluid center-image" style="max-width: 40px; display: block; margin: 0 auto;">';
-                } else {
-                    return 'No logo uploaded';
-                }
-            })
-            ->addColumn('action', function ($row) {
-                $actionbtn = '<a href="javascript:void(0)" class="btn btn-primary btn-sm me-1 edit" data-id="' . $row->id . '" data-bs-toggle="modal" data-bs-target="#editModal">
+                ->addIndexColumn()
+                ->addColumn('image', function ($row) {
+                    if ($row->image) {
+                        return '<img src="' . asset($row->image) . '" alt="image" class="img-fluid center-image" style="max-width: 40px; display: block; margin: 0 auto;">';
+                    } else {
+                        return 'No logo uploaded';
+                    }
+                })
+                ->addColumn('action', function ($row) {
+                    $actionbtn = '<a href="javascript:void(0)" class="btn btn-primary btn-sm me-1 edit" data-id="' . $row->id . '" data-bs-toggle="modal" data-bs-target="#editModal">
                                 <i class="fa fa-edit"></i>
                               </a>
                                 <button class="btn btn-danger btn-sm delete" data-id="' . $row->id . '">
@@ -43,10 +43,10 @@ class AdvertisementController extends Controller
                                 ' . csrf_field() . '
                                 ' . method_field('DELETE') . '
                             </form>';
-                return $actionbtn;
-            })
-            ->rawColumns(['image','action'])
-            ->make(true);
+                    return $actionbtn;
+                })
+                ->rawColumns(['image', 'action'])
+                ->make(true);
         }
         return view('admin.Advertisement.index');
     }
@@ -66,7 +66,7 @@ class AdvertisementController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            
+
         ]);
         // dd($request->all()); 
         advertisement::newAdvertisement($request);
@@ -98,7 +98,7 @@ class AdvertisementController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
         ]);
-    
+
         advertisement::updateAdvertisement($request, $advertisements);
         $this->toastr->success('Advertisement updated successfully!');
         return back();
@@ -113,56 +113,4 @@ class AdvertisementController extends Controller
         $this->toastr->success('Advertisement deleted successfully!');
         return back();
     }
-    // public function index()
-    // {
-    //     //
-    // }
-
-    // /**
-    //  * Show the form for creating a new resource.
-    //  */
-    // public function create()
-    // {
-    //     //
-    // }
-
-    // /**
-    //  * Store a newly created resource in storage.
-    //  */
-    // public function store(Request $request)
-    // {
-    //     //
-    // }
-
-    // /**
-    //  * Display the specified resource.
-    //  */
-    // public function show(string $id)
-    // {
-    //     //
-    // }
-
-    // /**
-    //  * Show the form for editing the specified resource.
-    //  */
-    // public function edit(string $id)
-    // {
-    //     //
-    // }
-
-    // /**
-    //  * Update the specified resource in storage.
-    //  */
-    // public function update(Request $request, string $id)
-    // {
-    //     //
-    // }
-
-    // /**
-    //  * Remove the specified resource from storage.
-    //  */
-    // public function destroy(string $id)
-    // {
-    //     //
-    // }
 }
