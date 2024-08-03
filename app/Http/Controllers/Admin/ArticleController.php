@@ -59,7 +59,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
+            'article_title' => 'required|string|max:255',
         ]);
         // dd($request->all()); 
         article::newArticles($request);
@@ -90,7 +90,7 @@ class ArticleController extends Controller
     public function update(Request $request, article $article)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
+            'article_title' => 'required|string|max:255',
         ]);
     
         article::updateArticles($request, $article);

@@ -40,7 +40,7 @@
                                     <div class="mb-3">
                                         <label class="form-label">Title <sup class="text-size-20 top-1">*</sup></label>
                                         <div class="input-group">
-                                            <input id="title" type="text" name="title" value="{{old('title')}}" class="form-control" required>
+                                            <input id="title" type="text" name="article_title" value="{{old('title')}}" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>

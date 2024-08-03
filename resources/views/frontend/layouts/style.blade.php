@@ -1,6 +1,8 @@
     <!-- favicon -->
-    <link rel=icon href="{{asset('/')}}frontend/assets/img/favicon.png" sizes="20x20" type="image/png">
-
+    @php
+    $setting = App\Models\Setting::first();
+    @endphp
+    <link rel="icon" href="{{ url($setting->favicon) }}" type="image/x-icon">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/vendor.css">
     <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/style.css">

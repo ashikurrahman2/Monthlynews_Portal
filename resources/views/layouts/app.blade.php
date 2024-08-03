@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Magpie - Blog, Magazine Html Template</title>
+    <title>ইতিহাস অন্বেষা</title>
     
-    <!-- favicon -->
-    <link rel=icon href="{{asset('/')}}frontend/assets/img/favicon.png" sizes="20x20" type="image/png">
-
     <!-- Stylesheet -->
 @include('frontend.layouts.style')
 

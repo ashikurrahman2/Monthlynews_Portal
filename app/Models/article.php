@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class article extends Model
 {
     use HasFactory;
-    protected $fillable = ['title','Author_name', 'Author_designation', 'content', 'published_at'];
+    protected $fillable = ['article_title','article_slug','Author_name', 'Author_designation', 'content', 'published_at'];
 
     
 
@@ -25,8 +26,8 @@ class article extends Model
 
     private static function saveBasicInfo($article, $request)
     {
-
-        $article->title = $request->title;
+        $article->article_title = $request->article_title;
+        $article->article_slug = Str::slug($request->article_title, '-');
         $article->Author_name = $request->Author_name;
         $article->Author_designation = $request->Author_designation;
         $article->content = $request->content;

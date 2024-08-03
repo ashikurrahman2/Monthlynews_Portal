@@ -4,31 +4,17 @@
     @method('PUT')
     <div class="modal-body">
         <div class="row">
-            <div class="form-group col-md-6">
+            <div class="col-md-12">
                 <label for="e_title" class="col-form-label pt-0">Title <sup class="text-size-20 top-1">*</sup></label>
                 <input type="text" class="form-control" id="e_title" value="{{$poem->title}}" name="title" required>
-            </div>
-            {{-- <div class="form-group col-md-6">
-                <label for="e_slug" class="col-form-label pt-0">Slug <sup class="text-size-20 top-1">*</sup></label>
-                <input type="text" class="form-control" id="e_slug" value="{{$poem->slug}}" name="slug" required>
-            </div> --}}
-            <div class="form-group col-md-6">
-                <label for="e_category_id" class="col-form-label pt-0">Category <sup class="text-size-20 top-1">*</sup></label>
-                <select class="form-control" id="e_category_id" name="category_id" required>
-                    @foreach($categories as $category)
-                            <option value="{{ $category->id }}" {{ $poem->category_id == $category->id ? 'selected' : '' }}>
-                                {{ $category->category_name }}
-                            </option>
-                    @endforeach
-                </select>
             </div>
             <div class="col-md-12">
                 <label for="e_excerpt" class="col-form-label pt-0">Author <sup class="text-size-20 top-1">*</sup></label>
                 <input type="text" class="form-control" id="e_title" name="Author_name" value={{$poem->Author_name}} required>
             </div>
             <div class="col-md-12">
-                <label for="e_excerpt" class="col-form-label pt-0">Designation <sup class="text-size-20 top-1">*</sup></label>
-                <input type="text" class="form-control" id="e_title" name="Author_designation"  value={{$poem->Author_designation}} required>
+                <label for="e_excerpt" class="col-form-label pt-0">Designation</label>
+                <input type="text" class="form-control" id="e_title" name="Author_designation"  value={{$poem->Author_designation}}>
             </div>
             <div class="form-group">
                 <label for="e_content" class="col-form-label pt-0">Content <sup class="text-size-20 top-1">*</sup></label>

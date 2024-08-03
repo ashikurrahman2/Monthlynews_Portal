@@ -27,12 +27,15 @@
     <!-- topbar end-->
 
     <!-- adbar end-->
+    @php
+    $setting = App\Models\Setting::first();
+    @endphp
     <div class="adbar-area d-none d-lg-block">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-5 align-self-center">
                     <div class="logo text-md-left text-center">
-                        <a class="main-logo" href="index.html"><img src="{{asset('/')}}frontend/assets/img/logo-3.png" alt="img"></a>
+                        <a class="main-logo" href="index.html"><img src="{{ url($setting->logo) }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-7 text-md-right text-center">
@@ -63,19 +66,22 @@
             </div>
             <div class="collapse navbar-collapse" id="nextpage_main_menu">
                 <ul class="navbar-nav menu-open">
-                    <li class="menu-item-has-children current-menu-item">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Home</a></li>
-                        </ul>
+                    <li class="menu-item">
+                        <a href="/">Home</a>
                     </li>
-                    <li class="menu-item-has-children current-menu-item">
+                    {{-- <li class="menu-item-has-children current-menu-item">
                         <a href="#">Category</a>
                         <ul class="sub-menu">
                             <li><a href="cat-tech.html">Tech</a></li>
                             <li><a href="cat-lifestyle.html">Lifestyle</a></li>
                             <li><a href="cat-fashion.html">Fashion</a></li>
                         </ul>
+                    </li> --}}
+                    <li class="menu-item current-menu-item">
+                        <a href="{{route('articles')}}">সম্পাদকীয়</a>
+                    </li>
+                    <li class="menu-item current-menu-item">
+                        <a href="{{route('poems')}}">কবিতা</a>
                     </li>
                     <li class="menu-item current-menu-item">
                         <a href="{{route('epapers')}}">ইপেপার</a>

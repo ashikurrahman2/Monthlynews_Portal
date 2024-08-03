@@ -41,5 +41,9 @@ class poem extends Model
 
         $poem->delete();
     }
+    public function getBanglaPublishedDateAttribute()
+    {
+        return convertToBanglaDate($this->published_at);
+    }
 
 }

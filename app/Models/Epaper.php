@@ -56,7 +56,7 @@ class Epaper extends Model
     {
         self::$directory = "upload/epaper/";
 
-        if ($request->hasFile('Paper_image')) {
+        if ($request->File('Paper_image')) {
             if (file_exists($epaper->Paper_image)) {
                 unlink($epaper->Paper_image);
             }
@@ -81,8 +81,8 @@ class Epaper extends Model
     {
         $epaper->paper_title = $request->paper_title;
         $epaper->paper_slug = Str::slug($request->paper_title, '-');
-        $epaper->paper_image = $imageUrl;
-        $epaper->paper_pdf = $pdfUrls;
+        $epaper->Paper_image = $imageUrl;
+        $epaper->Paper_pdf = $pdfUrls;
         $epaper->paper_date = date('d-m-y');
         $epaper->paper_month = date('F');
         $epaper->paper_year  = date('Y');
@@ -91,8 +91,8 @@ class Epaper extends Model
 
     public static function deleteEpapers($epaper)
     {
-        if (file_exists($epaper->paper_image)) {
-            unlink($epaper->paper_image);
+        if (file_exists($epaper->Paper_image)) {
+            unlink($epaper->Paper_image);
         }
         if (file_exists($epaper->Paper_pdf)) {
             unlink($epaper->Paper_pdf);

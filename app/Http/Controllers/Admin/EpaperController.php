@@ -39,7 +39,7 @@ class EpaperController extends Controller
                                 <button class="btn btn-danger btn-sm delete" data-id="' . $row->id . '">
                                     <i class="fa fa-trash"></i>
                                 </button>
-                            <form id="delete-form-' . $row->id . '" action="' . route('brand.destroy', $row->id) . '" method="POST" style="display: none;">
+                            <form id="delete-form-' . $row->id . '" action="' . route('epaper.destroy', $row->id) . '" method="POST" style="display: none;">
                                 ' . csrf_field() . '
                                 ' . method_field('DELETE') . '
                             </form>';
@@ -68,7 +68,7 @@ class EpaperController extends Controller
             'paper_title' => 'required|string|max:255',
             'paper_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'paper_pdf' => 'nullable|array',
-            'paper_pdf.*' => 'mimes:pdf|max:10000', // Ensure each file is a PDF
+            'paper_pdf.*' => 'mimes:pdf|max:100000', // Ensure each file is a PDF
         ]);
         // dd($request->all()); 
         Epaper::newEpapers($request);

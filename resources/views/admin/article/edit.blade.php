@@ -6,7 +6,7 @@
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="e_title" class="col-form-label pt-0">Title <sup class="text-size-20 top-1">*</sup></label>
-                <input type="text" class="form-control" id="e_title" value="{{$article->title}}" name="title" required>
+                <input type="text" class="form-control" id="e_title" value="{{$article->article_title}}" name="article_title" required>
             </div>
             <div class="form-group col-md-6">
                 <label for="e_category_id" class="col-form-label pt-0">Category <sup class="text-size-20 top-1">*</sup></label>

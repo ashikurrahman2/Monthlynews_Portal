@@ -38,7 +38,7 @@
                       <th>Title</th>
                       <th>Category Name</th>
                       <th>Excerpt</th>
-                      <th>Image</th>
+                      <th>Content</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -51,7 +51,7 @@
                       <th>Title</th>
                       <th>Category Name</th>
                       <th>Excerpt</th>
-                      <th>Image</th>
+                      <th>Content</th>
                       <th>Action</th>
                     </tr>
                   </tfoot>
@@ -79,7 +79,7 @@
                 <div class="row">
                   <div class="col-md-12">
                       <label for="e_title" class="col-form-label pt-0">Title <sup class="text-size-20 top-1">*</sup></label>
-                      <input type="text" class="form-control" id="e_title" name="title" required>
+                      <input type="text" class="form-control" id="e_title" name="article_title" required>
                   </div>
                   <div class="col-md-12">
                       <label for="e_excerpt" class="col-form-label pt-0">Author <sup class="text-size-20 top-1">*</sup></label>
@@ -141,7 +141,7 @@
             ajax: "{{ route('article.index') }}",
             columns: [
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
-                { data: 'title', name: 'title' },
+                { data: 'article_title', name: 'article_title' },
                 { data: 'Author_name', name: 'Author_name' },
                 { data: 'Author_designation', name: 'Author_designation' },
                 { data: 'content', name: 'content' },

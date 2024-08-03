@@ -6,8 +6,8 @@
         <div class="m-header">
             <a href="{{ route('admin.home') }}" class="b-brand text-primary">
                 <!-- Change your logo from here -->
-                {{-- <img src="{{ url($setting->logo) }}" alt="logo image" class="logo-lg" style="max-width: 150px; max-height: 50px;"> --}}
-                <span class="badge bg-primary rounded-pill ms-2 theme-version">মাসিক নিউজ পোর্টাল</span>
+                <img src="{{ url($setting->logo) }}" alt="logo image" class="logo-lg" style="max-width: 150px; max-height: 50px;">
+                {{-- <span class="badge bg-primary rounded-pill ms-2 theme-version">মাসিক পোর্টাল</span> --}}
             </a>
         </div>
         
@@ -52,45 +52,44 @@
                             <li class="pc-item"><a class="pc-link"
                                 href="{{route('epaper.index')}}">ই-পেপার</a>
                             </li>
+                             <li class="pc-item"><a class="pc-link"
+                                href="{{route('article.index')}}">আরটিকেল</a>
+                            </li> 
                             <li class="pc-item"><a class="pc-link"
-                               href="{{route('article.index')}}">আরটিকেল</a>
-                           </li> 
+                                href="{{route('poem.index')}}">কবিতা</a>
+                            </li>
 
-                           <li class="pc-item"><a class="pc-link"
-                            href="{{route('poem.index')}}">কবিতা</a>
-                        </li> 
-
-                        <li class="pc-item"><a class="pc-link"
-                            href="{{ route('advertisement.index') }}">বিজ্ঞাপন</a>
-                        </li>
+                            <li class="pc-item"><a class="pc-link"
+                                href="{{ route('advertisement.index') }}">বিজ্ঞাপন</a>
+                            </li>
                         </ul>
                 </li>
-          
+
                 <li class="pc-item pc-hasmenu">
                     <a href="#!" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-settings"></i></span>
-                            <span class="pc-mtext">সেটিংস</span>
+                            <span class="pc-mtext">Settings</span>
                             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                     </a>
                     <ul class="pc-submenu">
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('seo.index')}}">এসইও সেটিংস</a>
+                            href="{{route('seo.index')}}">SEO Setting</a>
                         </li>
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('website.index')}}">ওয়েবসাইট সেটিংস</a>
+                            href="{{route('website.index')}}">Website Setting</a>
                         </li>
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('page.index')}}">পেইজ মেনেজমেন্ট</a>
+                            href="{{route('page.index')}}">Page Management</a>
                         </li>
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('smtp.index')}}">এসএমটিপি সেটিংস</a>
+                            href="{{route('smtp.index')}}">SMTP Settings</a>
                         </li>
                         {{-- <li class="pc-item"><a class="pc-link"
                             href="{{route('brand.index')}}">Payment Gateway</a>
                         </li> --}}
                         <li class="pc-item"><a class="pc-link"
             
-                            href="{{ route('contacts.index') }}">যোগাযোগ</a>
+                            href="{{ route('contacts.index') }}"> Contact</a>
                     </li>
                     </ul>
                 </li>
