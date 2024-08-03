@@ -7,7 +7,7 @@
             <a href="{{ route('admin.home') }}" class="b-brand text-primary">
                 <!-- Change your logo from here -->
                 {{-- <img src="{{ url($setting->logo) }}" alt="logo image" class="logo-lg" style="max-width: 150px; max-height: 50px;"> --}}
-                <span class="badge bg-primary rounded-pill ms-2 theme-version">My Shop</span>
+                <span class="badge bg-primary rounded-pill ms-2 theme-version">মাসিক নিউজ পোর্টাল</span>
             </a>
         </div>
         
@@ -33,70 +33,64 @@
         </div>
         <div class="navbar-content">
             <ul class="pc-navbar">
-                <li class="pc-item pc-caption"><label>Navigation</label></li>
+                <li class="pc-item pc-caption"><label>এডমিন প্যানেল</label></li>
                 <li class="pc-item pc-hasmenu"><a href="#!" class="pc-link">
                         <span class="pc-micon"><i class="ph-duotone ph-gauge"></i> </span>
-                        <span class="pc-mtext">Dashboard</span>
+                        <span class="pc-mtext">ড্যাশবোর্ড</span>
                         <span class="pc-arrow"></span></a>
                 </li>
                 <li class="pc-item pc-hasmenu">
                         <a href="#!" class="pc-link">
                                 <span class="pc-micon"><i class="ti ti-layout-grid-add"></i></span>
-                                <span class="pc-mtext">News Category</span>
+                                <span class="pc-mtext">নিউজ ক্যাটাগরি</span>
                                 <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                         </a>
                         <ul class="pc-submenu">
                             <li class="pc-item"><a class="pc-link"
-                                href="{{route('category.index')}}">Categories</a>
+                                href="{{route('category.index')}}">ক্যাটাগরি</a>
                             </li>
                             <li class="pc-item"><a class="pc-link"
-                                href="{{route('epaper.index')}}">Epaper</a>
+                                href="{{route('epaper.index')}}">ই-পেপার</a>
                             </li>
-                             <li class="pc-item"><a class="pc-link"
-                                href="{{route('article.index')}}">Article</a>
-                            </li> 
+                            <li class="pc-item"><a class="pc-link"
+                               href="{{route('article.index')}}">আরটিকেল</a>
+                           </li> 
+
+                           <li class="pc-item"><a class="pc-link"
+                            href="{{route('poem.index')}}">কবিতা</a>
+                        </li> 
+
+                        <li class="pc-item"><a class="pc-link"
+                            href="{{ route('advertisement.index') }}">বিজ্ঞাপন</a>
+                        </li>
                         </ul>
                 </li>
-                {{-- <li class="pc-item pc-hasmenu">
-                    <a href="#!" class="pc-link">
-                        <span class="pc-micon"><i class="ti ti-settings"></i></span>
-                        <span class="pc-mtext">Offer</span>
-                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
-                    </a>
-                    <ul class="pc-submenu">
-                        <li class="pc-item"><a class="pc-link"
-                            href="{{route('coupon.index')}}">Coupon</a>
-                        </li>
-                        <li class="pc-item"><a class="pc-link"
-                            href="{{route('website.index')}}">E Campaing</a>
-                        </li>
-                    </ul>
-                </li> --}}
+          
                 <li class="pc-item pc-hasmenu">
                     <a href="#!" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-settings"></i></span>
-                            <span class="pc-mtext">Settings</span>
+                            <span class="pc-mtext">সেটিংস</span>
                             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                     </a>
                     <ul class="pc-submenu">
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('seo.index')}}">SEO Setting</a>
+                            href="{{route('seo.index')}}">এসইও সেটিংস</a>
                         </li>
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('website.index')}}">Website Setting</a>
+                            href="{{route('website.index')}}">ওয়েবসাইট সেটিংস</a>
                         </li>
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('page.index')}}">Page Management</a>
+                            href="{{route('page.index')}}">পেইজ মেনেজমেন্ট</a>
                         </li>
                         <li class="pc-item"><a class="pc-link"
-                            href="{{route('smtp.index')}}">SMTP Settings</a>
+                            href="{{route('smtp.index')}}">এসএমটিপি সেটিংস</a>
                         </li>
-                        <li class="pc-item"><a class="pc-link"
+                        {{-- <li class="pc-item"><a class="pc-link"
                             href="{{route('brand.index')}}">Payment Gateway</a>
-                        </li>
+                        </li> --}}
                         <li class="pc-item"><a class="pc-link"
             
-                            href="{{ route('contacts.index') }}"> Contact</a>
+                            href="{{ route('contacts.index') }}">যোগাযোগ</a>
                     </li>
                     </ul>
                 </li>

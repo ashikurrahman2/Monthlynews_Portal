@@ -2,7 +2,7 @@
 @section('title', 'Home')
 @section('content')
 <!-- breaking news start -->
-<div class="breaking-news">
+{{-- <div class="breaking-news">
     <div class="container">
         <div class="breaking-title" style="background-image: url('{{asset('/')}}frontend/assets/img/banner/01.png')">Breaking News</div>
         <div class="breaking-news-slider nav-style-base owl-carousel">
@@ -14,11 +14,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- breaking news end -->
 
 <!-- banner area start -->
-<div class="banner-area">
+{{-- <div class="banner-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
@@ -105,7 +105,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- banner area end -->
 
 <!-- trending area end -->
@@ -122,8 +122,13 @@
                     </div>
                     <div class="details">
                         <a class="tag-base tag-blue mb-3" href="cat-tech.html">Tech</a>
+                        
+                            
+                        
                         <h6 class="title mb-2"><a href="blog-details.html">Maluma Collaborated With Balmain on a Miami Vice–Style Capsule</a></h6>
+            
                         <div class="post-meta-single">
+
                             <ul>
                                 <li><i class="fa fa-user"></i>Magpie</li>
                                 <li><i class="fa fa-clock-o"></i> April 7, 2021</li>
